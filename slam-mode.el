@@ -18,12 +18,12 @@
   "Keymap for SLAM major mode.")
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.slm\\'" . slam-mode))
+;(add-to-list 'auto-mode-alist '("\\.slm\\'" . slam-mode))
 
 (defconst slam-font-lock-keywords-1
   (list
    '("\\<\\(co\\(?:py\\|vr\\)\\|dump\\|lambda\\|nop\\|\\|s\\(?:im\\|wap\\)\\)\\>" . font-lock-builtin-face)
-   '("\\('\\w*'\\)" . font-lock-variable-name-face))
+  )
   "Minimal highlighting expressions for SLAM mode.")
 
 (defvar slam-font-lock-keywords slam-font-lock-keywords-1
