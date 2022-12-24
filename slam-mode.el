@@ -27,7 +27,7 @@
   "Minimal highlighting expressions for SLAM mode.")
 
 (defconst slam-font-lock-keywords-2
-  (append wpdl-font-lock-keywords-1
+  (append slam-font-lock-keywords-1
     (list
      '("\\<\\(brk\\|macro\\|ret\\|asm\\|of\\|temp\\|push\\|oper\\|-\\|*\\|,\\|/%\\|+\\|^\\|!\\|!=\\|==\\|<\\|>\\|&&\\|||\\|()\\|sys0\\|sys1\\|sys2\\|sys3\\|sys4\\|sys5\\|sys6\\|[\\|]\\|\\)\\>" . font-lock-builtin-face)
     )
