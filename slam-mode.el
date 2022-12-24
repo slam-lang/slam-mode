@@ -13,10 +13,10 @@
 ;;; Code:
 (defvar slam-mode-hook nil)
 (defvar slam-mode-map
-  (let ((map (make-keymap)))
-    (define-key map "\C-j" 'newline-and-indent)
-    map)
-  "Slam-mode map.")
+  (let ((slam-mode-map (make-keymap)))
+    (define-key slam-mode-map "\C-j" 'newline-and-indent)
+    slam-mode-map)
+  "Keymap for SLAM major mode.")
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.slm\\'" . slam-mode))
@@ -51,4 +51,5 @@
   (run-hooks 'slam-mode-hook))
 
 (provide 'slam-mode)
+
 ;;; slam-mode.el ends here
