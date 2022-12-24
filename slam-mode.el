@@ -18,7 +18,7 @@
   "Keymap for SLAM major mode.")
 
 ;;;###autoload
-;(add-to-list 'auto-mode-alist '("\\.slm\\'" . slam-mode))
+(add-to-list 'auto-mode-alist '("\\.slm\\'" . slam-mode))
 
 (defconst slam-font-lock-keywords-1
   (list
@@ -44,8 +44,8 @@
     (modify-syntax-entry ?_ "w" slam-mode-syntax-table)
 
     ; Comment styles are same as C++
-    (modify-syntax-entry ?{ "1" slam-mode-syntax-table)
-    (modify-syntax-entry ?} "> b" slam-mode-syntax-table)
+    (modify-syntax-entry ?{ "(}" slam-mode-syntax-table)
+    (modify-syntax-entry ?} "){b" slam-mode-syntax-table)
     slam-mode-syntax-table)
   "Syntax table for slam-mode.")
 
