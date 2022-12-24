@@ -44,7 +44,6 @@
 (defun slam-mode ()
   "Major mode for editing slam files."
   (interactive)
-  (kill-all-local-variables)
   (use-local-map slam-mode-map)
   (set-syntax-table slam-mode-syntax-table)
   (set (make-local-variable 'font-lock-defaults) '(slam-font-lock-keywords))
