@@ -24,7 +24,7 @@
 (defconst slam-font-lock-keywords-1
   (list
    '("\\<\\(co\\(?:py\\|vr\\)\\|dump\\|lambda\\|nop\\|\\|s\\(?:im\\|wap\\)\\)\\>" . font-lock-builtin-face)
-   '("" . font-lock-variable-name-face))
+   '("\\('\\w*'\\)" . font-lock-variable-name-face))
   "Minimal highlighting expressions for SLAM mode.")
 
 (defvar slam-font-lock-keywords slam-font-lock-keywords-1
