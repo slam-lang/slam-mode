@@ -32,13 +32,13 @@
 (defvar slam-mode-syntax-table
   (let ((slam-mode-syntax-table (make-syntax-table)))
     ; This is added so entity names with underscores can be more easily parsed
-          (modify-syntax-entry ?_ "w" slam-mode-syntax-table)
+    (modify-syntax-entry ?_ "w" slam-mode-syntax-table)
 
-          ; Comment styles are same as C++
-          (modify-syntax-entry ?/ ". 124b" slam-mode-syntax-table)
-          (modify-syntax-entry ?* ". 23" salm-mode-syntax-table)
-          (modify-syntax-entry ?\n "> b" slam-mode-syntax-table)
-          slam-mode-syntax-table)
+    ; Comment styles are same as C++
+    (modify-syntax-entry ?/ ". 124b" slam-mode-syntax-table)
+    (modify-syntax-entry ?* ". 23" slam-mode-syntax-table)
+    (modify-syntax-entry ?\n "> b" slam-mode-syntax-table)
+    slam-mode-syntax-table)
   "Syntax table for slam-mode.")
 
 (defun slam-mode ()
