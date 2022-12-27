@@ -49,6 +49,7 @@
     slam-mode-syntax-table)
   "Syntax table for slam-mode.")
 
+;;;###autoload
 (defun slam-mode ()
   "Major mode for editing slam files."
   (interactive)
