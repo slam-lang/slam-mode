@@ -57,7 +57,23 @@
   (setq mode-name "SLAM")
   (run-hooks 'slam-mode-hook))
 
+(defun org-babel-execute:slam (body params)
+  "Execute a block of Slam code with org-babel."
+  (let ((in-file (org-babel-temp-file "s" ".slm"))
+       (verbosity (or (cdr (assq :verbosity params)) 0)))
+    (with-temp-file in-file
+      (insert body))
+  (let ((out-file (org-babel-temp-file "s" ""))
+       (verbosity (or (cdr (assq :verbosity params)) 0))))
+  (org-babel-eval
+  (format "slam compile --verbosity=%d -o %s %s" verbosity
+          (org-babel-process-file-name out-file)
+          (org-babel-process-file-name in-file))
+  (format "%s" 
+          (org-babel-process-file-name out-file))
+  "")))
+
+
+(provide 'org-babel-execute:slam)
 (provide 'slam-mode)
-
 ;;; slam-mode.el ends here
-
