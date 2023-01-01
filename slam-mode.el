@@ -66,10 +66,9 @@
     (let ((out-file (org-babel-temp-file "s" ""))
          (verbosity (or (cdr (assq :verbosity params)) 0)))
     (org-babel-eval
-      (format "slam compile --verbosity=%d -o %s %s" verbosity
+      (format "slam compile --verbosity=%d -o %s %s; %s" verbosity
               (org-babel-process-file-name out-file)
-              (org-babel-process-file-name in-file))
-      (format "%s" 
+              (org-babel-process-file-name in-file)
               (org-babel-process-file-name out-file))
       ""))))
 
