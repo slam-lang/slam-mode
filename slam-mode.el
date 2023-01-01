@@ -63,17 +63,15 @@
        (verbosity (or (cdr (assq :verbosity params)) 0)))
     (with-temp-file in-file
       (insert body))
-  (let ((out-file (org-babel-temp-file "s" ""))
-       (verbosity (or (cdr (assq :verbosity params)) 0)))
-    (with-temp-file out-file
-      (insert ""))
-  (org-babel-eval
-  (format "slam compile --verbosity=%d -o %s %s" verbosity
-          (org-babel-process-file-name out-file)
-          (org-babel-process-file-name in-file))
-  (format "%s" 
-          (org-babel-process-file-name out-file))
-  "")))
+    (let ((out-file (org-babel-temp-file "s" ""))
+         (verbosity (or (cdr (assq :verbosity params)) 0)))
+    (org-babel-eval
+      (format "slam compile --verbosity=%d -o %s %s" verbosity
+              (org-babel-process-file-name out-file)
+              (org-babel-process-file-name in-file)
+      (format "%s" 
+              (org-babel-process-file-name out-file))
+      ""))))
 
 
 (provide 'org-babel-execute:slam)
