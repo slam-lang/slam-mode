@@ -71,7 +71,7 @@
               (org-babel-process-file-name in-file)
       (format "%s" 
               (org-babel-process-file-name out-file))
-      ""))))
+      "")))))
 
 
 (provide 'org-babel-execute:slam)
