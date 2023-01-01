@@ -23,6 +23,7 @@
 (defconst slam-font-lock-keywords-1
   (list
    '("\\<\\(argv?\\|co\\(?:py\\|vr\\)\\|d\\(?:isc\\|ump\\)\\|lambda\\|nop\\|putc?\\|readc?\\|s\\(?:im\\|wap\\)\\)\\>" . font-lock-builtin-face)
+   '("\\<\\(proc\\)\\>" . font-lock-constant-face)
    '("\\('\\w*'\\)" . font-lock-variable-name-face)
   )
   "Minimal highlighting expressions for SLAM mode.")
