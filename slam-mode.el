@@ -68,10 +68,10 @@
     (org-babel-eval
       (format "slam compile --verbosity=%d -o %s %s" verbosity
               (org-babel-process-file-name out-file)
-              (org-babel-process-file-name in-file)
+              (org-babel-process-file-name in-file))
       (format "%s" 
               (org-babel-process-file-name out-file))
-      "")))))
+      ""))))
 
 
 (provide 'org-babel-execute:slam)
