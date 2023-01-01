@@ -23,10 +23,13 @@
 (defconst slam-font-lock-keywords-1
   (list
    '("\\<\\(argv?\\|co\\(?:py\\|vr\\)\\|d\\(?:isc\\|ump\\)\\|lambda\\|nop\\|putc?\\|readc?\\|s\\(?:im\\|wap\\)\\)\\>" . font-lock-builtin-face)
+   '("\\('\\w*'\\)" . font-lock-variable-name-face)
   )
   "Minimal highlighting expressions for SLAM mode.")
 
-; (regexp-opt '("sim" "lambda" "nop" "swap" "dump" "copy" "covr" "readc" "read" "putc" "put" "disc" "argv" "arg") t)
+; (regexp-opt '("sim" "lambda" "nop" "swap" "dump" "copy"
+; "covr" "readc" "read" "putc" "put" "disc" "argv" "argc"
+; "envp" "sys0" "sys1" "sys2" "sys3") t)
 ; ".\\(argv?\\|co\\(?:py\\|vr\\)\\|d\\(?:isc\\|ump\\)\\|lambda\\|nop\\|putc?\\|readc?\\|s\\(?:im\\|wap\\)\\)"
 
 (defvar slam-font-lock-keywords slam-font-lock-keywords-1
