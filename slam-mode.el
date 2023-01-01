@@ -44,8 +44,8 @@
     (modify-syntax-entry ?_ "w" slam-mode-syntax-table)
 
     ; Comment styles are same as C++
-    (modify-syntax-entry ?{ ". b" slam-mode-syntax-table)
-    (modify-syntax-entry ?} "){>" slam-mode-syntax-table)
+    (modify-syntax-entry ?{ "<" slam-mode-syntax-table)
+    (modify-syntax-entry ?} ">" slam-mode-syntax-table)
     slam-mode-syntax-table)
   "Syntax table for slam-mode.")
 
