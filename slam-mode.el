@@ -35,18 +35,18 @@
   "Minimal highlighting expressions for SLAM mode.")
 
 
-(defvar slam-font-lock-keywords slam-font-lock-keywords-2
+(defvar slam-font-lock-keywords slam-font-lock-keywords-1
   "Default highlighting expressions for SLAM mode.")
 
 (defvar slam-mode-syntax-table
-  (let ((slam-mode-syntax-table (make-syntax-table)))
+  (let ((syntax-table (make-syntax-table)))
     ; This is added so entity names with underscores can be more easily parsed
-    (modify-syntax-entry ?_ "w" slam-mode-syntax-table)
+    (modify-syntax-entry ?_ "w" syntax-table)
 
     ; Comment styles are same as C++
-    (modify-syntax-entry ?{ "<" slam-mode-syntax-table)
-    (modify-syntax-entry ?} ">" slam-mode-syntax-table)
-    slam-mode-syntax-table)
+    (modify-syntax-entry ?{ "<" syntax-table)
+    (modify-syntax-entry ?} ">" syntax-table)
+    syntax-table)
   "Syntax table for slam-mode.")
 
 (defun slam-mode ()
