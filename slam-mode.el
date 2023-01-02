@@ -12,9 +12,9 @@
 ;;; Code:
 (defvar slam-mode-hook nil)
 (defvar slam-mode-map
-  (let ((map (make-keymap)))
-    (define-key map "\C-j" 'newline-and-indent)
-    map)
+  (let ((smap (make-keymap)))
+    (define-key smap "\C-j" 'newline-and-indent)
+    smap)
   "Keymap for SLAM major mode.")
 
 ;;;###autoload
@@ -50,8 +50,9 @@
 (defun slam-mode ()
   "Major mode for editing slam files."
   (interactive)
-  (use-local-map slam-mode-map)
+  (kill-all-local-variables)
   (set-syntax-table slam-mode-syntax-table)
+  (use-local-map slam-mode-map)
   (set (make-local-variable 'font-lock-defaults) '(slam-font-lock-keywords))
   (setq major-mode 'slam-mode)
   (setq mode-name "SLAM")
