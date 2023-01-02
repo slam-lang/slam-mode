@@ -19,6 +19,7 @@
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.slm\\'" . slam-mode))
+(add-to-list 'auto-mode-alist '("\\.slh\\'" . slam-mode))
 
 (defconst slam-font-lock-keywords-1
   (list
