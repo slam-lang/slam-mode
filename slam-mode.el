@@ -22,7 +22,7 @@
 
 (defconst slam-font-lock-keywords-1
   (list
-   '("\\<\\(sim\\|lambda\\|nop\\|swap\\|dump\\|copy\\|covr\\|readc\\|read\\|putc\\|put\\|disc\\|argv\\|argc\\|envp\\|const\\|quit\\|if\\|proc\\|do\\|end\\|inc\\|enum\\|var\\|gvar\\|prop\\|class\\|cproc\\|lnk\\)\\>" . font-lock-const-face)
+   '("\\<\\(sim\\|lambda\\|nop\\|swap\\|dump\\|copy\\|covr\\|readc\\|read\\|putc\\|put\\|disc\\|argv\\|argc\\|envp\\|const\\|quit\\|if\\|proc\\|do\\|end\\|inc\\|enum\\|var\\|gvar\\|prop\\|class\\|cproc\\|lnk\\)\\>" . font-lock-constant-face)
   )
   "Minimal highlighting expressions for SLAM mode.")
 (defconst slam-font-lock-keywords-2
