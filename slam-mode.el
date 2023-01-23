@@ -23,7 +23,7 @@
 
 (defconst slam-font-lock-keywords-1
   (list
-   '("\\<\\(sim\\|lambda\\|nop\\|swap\\|dump\\|copy\\|covr\\|readc\\|read\\|putc\\|put\\|disc\\|argv\\|argc\\|envp\\|const\\|quit\\|if\\|proc\\|do\\|end\\|inc\\|enum\\|var\\|gvar\\|prop\\|class\\|cproc\\|lnk\\)\\>" . font-lock-constant-face)
+   '("\\<\\(unsafe\\|head\\|sim\\|lambda\\|nop\\|swap\\|dump\\|copy\\|covr\\|readc\\|read\\|putc\\|put\\|disc\\|argv\\|argc\\|envp\\|const\\|quit\\|if\\|proc\\|do\\|end\\|inc\\|enum\\|var\\|gvar\\|prop\\|class\\|cproc\\|lnk\\)\\>" . font-lock-constant-face)
   )
   "Minimal highlighting expressions for SLAM mode.")
 (defconst slam-font-lock-keywords-2
@@ -54,6 +54,7 @@
   (let ((syntax-table (make-syntax-table)))
     ; This is added so entity names with underscores can be more easily parsed
     (modify-syntax-entry ?_ "w" syntax-table)
+    (modify-syntax-entry ?\" "w" syntax-table)
 
     ; Comment styles are same as C++
     (modify-syntax-entry ?{ "<" syntax-table)
